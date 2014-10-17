@@ -1,0 +1,23 @@
+'#commentContent' : {
+    borderWidth: 2,
+    borderColor: '#bbb',
+    borderRadius: 5,
+    top:'5dp',
+    left:'5dp',
+    right:'5dp',
+    bottom:'240dp',
+    color : 'black',
+    focusable: true,
+    font: {
+        fontSize:'16dp',
+    },
+    suppressReturn:false,
+    autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+    autocorrect: true
+},
+'#commentContent[platform=android]' : {
+    height:'240dp',
+},
+'ScrollView[platform=android]' : {
+    contentHeight:'240dp',
+}

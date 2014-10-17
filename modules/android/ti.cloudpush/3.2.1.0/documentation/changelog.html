@@ -1,0 +1,28 @@
+<h1>Change Log</h1>
+<p><pre>
+v3.2.1  Fix an issue where 'trayClickFocusedApp' is not fired properly [TIMOB-16360]</p>
+<p>v3.2.0  Add support for grouped notifications in Android [TIMODOPEN-313]
+        Fix an issue of Android app background / foreground detection [TIMODOPEN-318][TIMODOPEN-319][TIMODOPEN-320]
+        Bumping version to match the TiSDK version this module is being shipped with</p>
+<p>v2.4.0  Moved MQTT to a separate module [TIMODOPEN-299]</p>
+<p>v2.3.3  Fix a GCM related problem lead to app crash on Android 2.x [CLOUDSRV-2829][MOD-1555]
+        Update google services library [TIMOB-15617]</p>
+<p>v2.3.2  GCM usability imporovement on setting gcm_sender_id inner ACS app web console [CLOUDSRV-2549]
+        Add a new method (clearStatus) to enable reinitialize Ti.CloudPush, to replace app key, sender id, or other stored information
+        Update google services library [TIMOB-15022]</p>
+<p>v2.3.1  Fix an issue MQTT Push Service still starts under GCM mode, if device reboots or power off and on [CLOUDSRV-2522]
+        Fix an issue incorrect app background status check under GCM mode [CLOUDSRV-2504]</p>
+<p>v2.3.0  Added support for MQTT SSL, and GCM</p>
+<p>v2.2.0  Minor update to adapt enterprise Push environment [CLOUDSRV-2281]</p>
+<p>v2.1.0  Fix issue with triggering multiple callbacks together [CLOUDSRV-1532]
+        Add a new property in (singleCallback) to add ability to handle push notifications one by one when multiple ones come
+        Improve stability</p>
+<p>v2.0.8  Fix issue with application restart when receiving push notifications without app in memory [CLOUDSRV-1409]</p>
+<p>v2.0.7  Updated push service to latest ACS SDK [MOD-832]</p>
+<p>v2.0.6  Added an optional tiapp.xml property "acs-push-coordinator-url" just like "acs-api-key" for coordinator customization [MOD-699].</p>
+<p>v2.0.5  Fixed issues with sound and icon not working on some devices [MOD-749, MOD-750]</p>
+<p>v2.0.4  Added support for the push notification customizations in the ACS GUI (such as vibration, sounds, badge numbers, etc).</p>
+<p>v2.0.3  Fixed crash on Android 3.0+.</p>
+<p>v2.0.1  Removed the "deviceToken" property in favor of the new asynchronous "retrieveDeviceToken" method.
+        Fixed tray crashing from BG on certain devices.</p>
+<p>v2.0.0  Initial Release</p>

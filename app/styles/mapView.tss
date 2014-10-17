@@ -1,0 +1,51 @@
+"#mainWindow": {
+  title: 'Location Detail',
+  backgroundColor: "white",
+  top: "0dp",
+  layout: "vertical",
+  width: "100%",
+  height: "100%"
+},
+"#mapview": {
+  width: "90%",
+  height: "290dp" ,
+  top: "5dp",
+  borderColor: "gray",
+  borderWidth: 1
+},
+"#thumb": {
+  top: '5dp',
+  width: '38dp',
+  height: '38dp'
+},
+"#header": {
+  width: "90%",
+  height: Ti.UI.SIZE,
+  layout: "horizontal"
+},
+'#title': {
+  top: '2dp',
+  left: '2dp',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  textAlign: 'left',
+  font: {
+    fontSize: '13dp'
+  }
+},
+'#location': {
+  top: '2dp',
+  left: '2dp',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  textAlign: 'left',
+  font: {
+    fontSize: '10dp'
+  }
+},
+"#textContainer": {
+  left: "5dp",
+  width: Ti.UI.FILL,
+  height: Ti.UI.SIZE,
+  layout: "vertical"
+}

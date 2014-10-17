@@ -1,0 +1,74 @@
+"#row" : {
+    selectedBackgroundColor : 'transparent',
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+    horizontalWrap: false
+},
+".container": {
+    backgroundColor : 'white',
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+    top : 0,
+    layout : 'horizontal',
+    horizontalWrap: false,
+},
+".textContainer": {
+    backgroundColor : 'white',
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+    top : 0,
+    bottom : '5dp',
+    layout : 'vertical',
+},
+"#avatar" : {
+    top : '5dp',
+    left : '5dp', 
+    width : '38dp',
+    height : '38dp'
+},
+"#comment" : {
+    top : '2dp',
+    left : '5dp',
+    textAlign : 'left',
+    height : Ti.UI.SIZE,
+    width : Ti.UI.FILL,
+    font : {
+      fontSize : '14dp'
+    }
+},
+"#comment[platform=android]" : {
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+    bottom : '2dp',
+    textAlign : 'left',
+    font : {
+      fontSize : '14dp'
+    }
+},
+".userInfo" : {
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+    horizontalWrap : false,
+    bottom : '2dp',
+},
+'#userName' : {
+    top : '5dp',
+    left : '5dp',
+    width : Ti.UI.SIZE,
+    height : Ti.UI.SIZE,
+    font : {
+        fontSize : '14dp',
+        fontWeight : 'bold'
+    },
+},
+
+'#date' : {
+    top : '5dp',
+    right : '5dp',
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+    textAlign : 'right',
+    font : {
+        fontSize : '14dp',
+    }
+}

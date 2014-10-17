@@ -1,0 +1,43 @@
+<!-- settings.xml -->
+<Alloy>
+    <Tab title='Settings'>
+        <Window title='Settings'>
+            <RightNavButton platform='ios'>
+                <Button id='logoutBtn'>Logout</Button>
+            </RightNavButton>
+            <View id='header'>
+                <ImageView id='profileImage'></ImageView>
+                <View id='statsBox'>
+                    <Label id='fullname' class='left4dp top10dp'></Label>
+                    <View class='hdrBox left4dp'>
+                        <Label class='hdrLabel'>Photos:</Label>
+                        <Label class='hdrCount' id='photoCount'>0</Label>
+                    </View>
+                    <View class='hdrBox left4dp bottom10dp'>
+                        <Label class='hdrLabel'>Friends:</Label>
+                        <Label class='hdrCount' id='friendCount'>0</Label>
+                    </View>
+                </View>
+            </View>
+            <View id='mainBody'>
+                <Label class='sectionHdr  top20dp'>Social Media</Label>
+                <View class='sectionSeperator'/>
+                <View class='switchContainer'>
+                    <Label class='switchLabel'>Facebook Status</Label>
+                    <Switch id='facebookBtn' onChange='onSwitchChange'></Switch>
+                </View>
+                <View class='switchContainer'>
+                    <Label class='switchLabel'>Twitter Status</Label>
+                    <Switch id='twitterBtn' onChange='onSwitchChange'></Switch>
+                </View>
+                <Label class='sectionHdr top10dp'>Push Notification</Label>
+                <View class='sectionSeperator'/>
+                <View class='switchContainer'>
+                    <Label class='switchLabel'>Notifications Status</Label>
+                    <Switch id='notificationsBtn' onChange='onSwitchChange'></Switch>
+                </View>
+            </View>
+            <Button id='refreshBtn'></Button>
+        </Window>
+    </Tab>
+</Alloy>

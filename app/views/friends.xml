@@ -1,0 +1,52 @@
+<Alloy>
+	<Collection src="user" instance="true" id="friendUserCollection">
+	<Tab title="Friends">
+		<Window title="Friends" id="friendsWindow">
+			<!-- used to toggle between different types of users -->
+			<View id="filterContainer">
+				<TabbedBar id="filter" platform="ios">
+					<Labels>
+						<Label>Users</Label>
+						<Label>Friends</Label>
+					</Labels>
+				</TabbedBar>
+				<View id='androidPickerContainer' platform="android" >
+					<Picker id="filter" >
+						<PickerColumn id="column1" >
+							<PickerRow title="Users"/>
+							<PickerRow title="Friends"/>
+						</PickerColumn>
+					</Picker>
+				</View>
+			</View>
+			<ListView id='listView'>
+				<Templates>
+					<ItemTemplate name="fullItem" height="40dp" width="Ti.UI.FILL">
+						<View id="userView">
+							<ImageView bindId="userAvatar" id="userAvatar" />
+							<Label bindId="userName" id="userName"/>
+						</View>
+						<Button title="Follow" class="actionBtn"
+						onClick="followBtnClicked"/>
+					</ItemTemplate>
+					<ItemTemplate name="friends" height="40dp" width="Ti.UI.FILL">
+						<View id="userView">
+							<ImageView bindId="userAvatar" id="userAvatar" />
+							<Label bindId="userName" id="userName"/>
+						</View>
+						<Button title="UnFollow" class="actionBtn"
+						onClick="followingBtnClicked"/>
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="section" dataCollection="$.friendUserCollection"   
+                          dataTransform="doTransform"
+                          dataFilter="doFilter">
+    				<ListItem template="{template}" userName:text="{title}" 
+    					userAvatar:image="{image}" 
+                 		modelId="{modelId}">
+                 	</ListItem>
+				</ListSection>
+			</ListView>
+		</Window>
+	</Tab>
+</Alloy>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">vGRl4mfLdZRfReYkkpl1Ai7E6PqjzhTQ</property>
+    <property name="acs-oauth-key-production" type="string">eCGpJQdTVpeA9RHDE68acNsAmpRMymqy</property>
+    <property name="acs-api-key-production" type="string">iG0t5Rk7bvOoaPL3Nxp2pPYRQNLv0hx6</property>
+    <property name="acs-oauth-secret-development" type="string">tRUNwGuZdGZqFie51uCeJQ4XKKe7nBgd</property>
+    <property name="acs-oauth-key-development" type="string">vRWjO2Rq9BMIevU6VkVtRN75Bw1bS8og</property>
+    <property name="acs-api-key-development" type="string">o8hmR7f6O2Neqb17Ob00WZr09R32iCXX</property>
+    <id>com.wiley.TIgram</id>
+    <name>wileychapter5</name>
+    <version>1.0</version>
+    <publisher>aaronksaunders</publisher>
+    <url>http://www.clearlyinnovative.com</url>
+    <description>not specified</description>
+    <copyright>2014 by aaronksaunders</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>6a71e7d4-195b-4eb8-8ce5-d139ed15ca79</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="ti.facebook.appid">175961759252181</property>
+    <property name="twitter.consumerKey">wNuaWTd7whh43kkMjHGA</property>
+    <property name="twitter.consumerSecret">Al0un0pjLk8nJd0U4ucMlFQS5hhxpay0eUGyANSLEpU</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <tool-api-level>14</tool-api-level>
+        <manifest>
+            <application android:hardwareAccelerated="true" android:theme="@style/Theme.MyTheme">
+                <meta-data
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA5aBozWPZYZ9l-UoExJar-bSfkY8Sr6bg"/>
+                <service android:name="com.appcelerator.cloud.push.PushService"/>
+            </application>
+            <!-- Camera Access -->
+            <uses-permission android:name="android.permission.CAMERA"/>
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.VIBRATE"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-feature android:name="android.hardware.camera"/>
+            <uses-feature android:name="android.hardware.camera.autofocus"/>
+            <!-- Allows the API to access Google web-based services -->
+            <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+            <!-- Specify OpenGL ES 2.0 as a requirement -->
+            <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+            <!-- Replace <com.domain.appid> with your application ID -->
+            <uses-permission android:name="com.tinjaw.wileytigram.permission.MAPS_RECEIVE"/>
+            <permission
+                android:name="com.tinjaw.wileytigram.MAPS_RECEIVE" android:protectionLevel="signature"/>
+            <!-- -->
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs">ti.cloud</module>
+        <module platform="android">facebook</module>
+        <module platform="iphone">facebook</module>
+        <module platform="android" version="3.2.1.0">ti.cloudpush</module>
+        <module platform="android" version="2.1.4.0">ti.map</module>
+        <module platform="iphone">ti.map</module>
+        <module platform="iphone">ti.imagefactory</module>
+        <module platform="android">ti.imagefactory</module>
+    </modules>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+        <target device="ipad">false</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">false</target>
+        <target device="tizen">false</target>
+    </deployment-targets>
+    <sdk-version>3.2.3.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+</ti:app>

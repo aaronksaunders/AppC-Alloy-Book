@@ -1,0 +1,12 @@
+<Alloy>
+    <Window id="mainWindow" >
+        <View id="header">
+            <ImageView id="thumb"></ImageView>
+            <View id="textContainer" >
+                <Label id="title"></Label>
+                <Label id="location"></Label>
+            </View>
+        </View>
+        <View ns="Alloy.Globals.Map" id="mapview" ></View>
+    </Window>
+</Alloy>

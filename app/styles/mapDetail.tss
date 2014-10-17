@@ -1,0 +1,35 @@
+'.container': {
+  layout: 'vertical',
+  width: '90%'
+},
+'#buttonContainer': {
+  layout: 'horizontal',
+  width: Ti.UI.FILL,
+  height: '42dp'
+},
+'#image': {
+  top: '5dp',
+  left: '14dp',
+  width: '270dp',
+  height: '270dp'
+},
+'#imageContainer': {
+  width: '300dp',
+  height: '284dp'
+},
+'#commentButton': {
+  left: '26dp',
+  width: '40%',
+  height: '32dp'
+},
+'#shareButton': {
+  left: '10dp',
+  width: '40%',
+  height: '32dp'
+}
+'#commentButton[platform=android]': {
+  height: '42dp'
+},
+'#shareButton[platform=android]': {
+  height: '42dp'
+}

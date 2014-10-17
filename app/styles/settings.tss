@@ -1,0 +1,151 @@
+'View' : {
+    layout : 'horizontal',  
+    width : Ti.UI.FILL,
+    height : Ti.UI.SIZE,
+},
+'Window' : {
+  layout : 'vertical',
+  height : Ti.UI.FILL
+},
+'Label' : {
+  color : '#444'
+}
+'#header' : {
+    horizontalWrap : false
+},
+'#logoutBtn' : {
+  bottom: '10dp'
+},
+'#profileImage' : {
+    top : '13dp',
+    left : '10dp',
+    width : '100dp',
+    height :'100dp',
+    borderColor : '#CCC',
+    border : '1dp'
+},
+'#statsBox' : {
+    layout : 'vertical',
+    top : '20dp',
+    left : '5dp',
+    right : '5dp',
+    borderColor : '#CCC',
+    borderWidth : '1dp',
+    horizontalWrap : false
+},
+// for some reason, the 'right' property is not working on android
+// https://jira.appcelerator.org/browse/TIMOB-15525
+'#statsBox[platform=android]' : {
+    layout : 'vertical',
+    top : '20dp',
+    left : '5dp',
+    width : '65%',
+    height : Ti.UI.SIZE,
+    borderColor : '#CCC',
+    borderWidth : '1dp',
+    horizontalWrap : false
+},
+'#fullname' : {
+    bottom : '2dp',
+    textAlign : 'left',  
+        color : '#444', 
+    font : {
+        fontSize : '18dp',
+        fontWeight : 'bold'
+    }
+}
+'.left4dp' : {
+    left :'4dp',
+},
+'.top10dp' : {
+    top :'10dp',
+},
+'.bottom10dp' : {
+    bottom :'10dp',
+},
+'.hdrBox' : {
+},
+'.hdrLabel' : {
+    left : '0dp',
+    textAlign : 'left',    
+    font : {
+        fontWeight : 'bold',
+        fontSize : '16dp'      
+    }
+},
+'.hdrCount' : {
+    font : {
+        fontSize : '16dp',
+    }
+}
+'#refreshBtn' : {
+    top : '50dp',
+    width : '80%',
+    height : '32dp',
+    title : 'REFRESH COUNTS'    
+},
+'#refreshBtn[platform=android]' : {
+    height : '42dp',
+},
+'#mainBody' : {
+  layout : 'vertical'
+},
+'.top20dp' : {
+    top :'20dp',
+},
+'.sectionHdr' : {
+    width : Ti.UI.FILL,
+    height :Ti.UI.SIZE,   
+    color : '#444', 
+    font : {
+        fontWeight : 'bold',
+        fontSize : '16dp',
+    }
+},
+'.sectionSeperator[platform=ios]' : {
+    width : '80%',
+    height :'1dp',    
+    backgroundColor : '#CCC'
+},
+'.sectionSeperator[platform=android]' : {
+    width : '90%',
+    height :'1dp',    
+    backgroundColor : '#CCC'
+},
+'.switchContainer[platform=ios]' : {
+    top : '4dp',
+    height : '38dp',
+    layout : 'horizontal',
+    width : '100%',    
+},
+'.switchContainer[platform=android]' : {
+    top : '4dp',
+    height : Ti.UI.SIZE,
+    layout : 'horizontal',
+    width : '100%',    
+},
+'.switchLabel' : {
+    textAlign : 'right',
+    left : 0,
+    right : '30dp',
+    width : '60%',
+    color : '#444', 
+    center : {
+      y : '50%'
+    },    
+},
+'Switch[platform=android]' : {
+  titleOn:'Enabled',
+  titleOff:'Disabled',
+  value:true,
+  width: '100dp', 
+  height:'44dp' 
+},
+'Switch[platform=ios]' : {
+    value : true, // mandatory property for iOS
+    left : '8dp',
+    height : '28dp',
+    center : {
+      y : '50%'
+    },
+}

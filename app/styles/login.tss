@@ -1,0 +1,128 @@
+// General Styles
+'.tfWrapper': {
+	top: '6dp',
+	width: '260dp',
+	height: '40dp',
+	border: 1,
+	borderColor: 'gray'
+},
+'.centerHelper': {
+	top: '10dp',
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	layout: 'horizontal'
+},
+ScrollView: {
+	contentHeight: Ti.UI.SIZE,
+	contentWidth: Ti.UI.SIZE
+},
+TextField: {
+	autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	autocorrect: false,
+	top: '2dp',
+	left: '4dp',
+	bottom: '2dp',
+	right: '4dp',
+	paddingLeft: '4dp',
+	backgroundColor: 'white',
+	color : 'black'
+},
+
+// Default Button Style
+"Button" : {
+	top: '6dp',
+	width: '124dp',
+	height: '36dp',
+	font:{
+		fontSize: '13dp'
+	}
+}
+
+'#homeView' : {
+    visible : true,
+    top : '90dp',
+    layout: 'vertical',
+    backgroundColor : 'transparent'
+},
+'#hvButtonContainer' : {
+    top:'20dp',
+    width:'150',
+    height:Ti.UI.SIZE,
+    layout: 'vertical'
+},
+'#welcomeText' :{
+    text : "Welcome Text Goes Here For the App",
+    font:{
+        fontSize:'24dp',
+        fontWeight : 'bold'
+    }
+},
+'#loginView' : {
+    visible : false,
+    width:Ti.UI.SIZE,
+    height:Ti.UI.SIZE,
+    top : '90dp',
+    layout:'vertical',
+    borderColor :'transparent'
+},
+'#loginText' :{
+    text : "Login Text Goes Here For the App",
+    font:{
+        fontSize:'24dp',
+        fontWeight : 'bold'
+    }
+},
+'#lvContainer' : {
+    top:'20dp',
+    width:'280dp',
+    height:Ti.UI.SIZE,
+    layout:'vertical',
+    borderColor :'orange',
+    borderWidth :0
+},
+'#createAcctView' : {
+   visible: false,
+   width: Ti.UI.SIZE,
+   height: Ti.UI.SIZE,
+   top: '90dp',
+   layout: 'vertical',
+   backgroundColor: 'transparent'
+},
+'#accountText' :{
+   text: "Account Text Goes Here For the App",
+   font:{
+    fontSize: '24dp',
+    fontWeight: 'bold'
+   }
+},
+'#cavContainer' : {
+   top: '20dp',
+   width: '280dp',
+   height: Ti.UI.SIZE,
+   layout: 'vertical',
+},
+'#acct_fname' : {
+   hintText: 'first name'
+},
+'#acct_lname' : {
+   hintText: 'last name'
+},
+'#acct_email' : {
+   hintText: 'email address'
+},
+'#acct_password' : {
+   passwordMask: true,
+   hintText: 'password'
+},
+'#acct_password_confirmation' : {
+   passwordMask: true,
+   hintText: 'password confirmation'
+},
+'#cancelCreateAcctBtn' : {
+   left: '10dp'
+},
+'#doCreateAcctBtn' : {
+   left: '0dp'
+}
+

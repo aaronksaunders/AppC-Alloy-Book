@@ -1,0 +1,33 @@
+<!-- feed.xml -->
+<Alloy>
+    <Tab id='feedTab' title='Feed'>
+        <Window id='feedWindow' title='Feed'>
+            <RightNavButton platform='ios'>
+                <Button id='cameraButton'>Camera</Button>
+            </RightNavButton>
+            <View id='filterContainer' >
+                <!-- ios support -->
+                <TabbedBar id='filter' platform='ios'>
+                    <Labels>
+                        <Label >List</Label>
+                        <Label >Map</Label>
+                    </Labels>
+                </TabbedBar>
+                <!-- android support -->
+                <View id='androidPickerContainer' platform='android' >
+                    <Picker id='filter' selectionIndicator='true' >
+                        <PickerColumn id='column1'>
+                            <PickerRow title='List'/>
+                            <PickerRow title='Map'/>
+                        </PickerColumn>
+                    </Picker>
+                </View>
+            </View>
+            <View id='contentView'>
+                <TableView id='feedTable'></TableView>
+                <View ns='Alloy.Globals.Map' id='mapview'></View>
+            </View>
+        </Window>
+    </Tab>
+</Alloy>
+

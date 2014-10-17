@@ -1,0 +1,36 @@
+'#feedWindow': {
+  layout: 'vertical'
+},
+'#filterContainer': {
+  top: '5dp',
+  height: Ti.UI.SIZE,
+  width: '70%'
+},
+'#filter[platform=ios]': {
+  style: Ti.UI.iPhone.SystemButtonStyle.BAR,
+  height: 30,
+  width: '70%'
+}
+'#androidPickerContainer': {
+  height: Ti.UI.SIZE,
+  width: Ti.UI.SIZE,
+  backgroundColor: '#A3A3A3'
+},
+'#filter[platform=android]': {
+  height: '38dp',
+  width: '70%'
+},
+'#mapview': {
+  width: '90%',
+  height: Ti.UI.FILL,
+  top: '5dp',
+  bottom: '5dp',
+  borderColor: 'gray',
+  borderWidth: 1,
+  visible: false
+},
+'#feedTable': {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  visible : true
+}

@@ -1,0 +1,90 @@
+<h1>Ti.CloudPush Module</h1>
+<h2>Description</h2>
+<p>Push notifications for Android via Appcelerator Cloud Services. When push is enabled, this module persistently connects
+to the ACS servers using a long lived and very light TCP socket. Using this, push notifications can be sent to your
+users.</p>
+<p>For more information, please look at the Appcelerator Cloud Services documentation on <a href="http://www.appcelerator.com/">http://www.appcelerator.com/</a>.</p>
+<h2>Getting Started</h2>
+<p>View the <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+<h2>Accessing the Ti.CloudPush Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var CloudPush = require('ti.cloudpush');
+</code></pre>
+<h2>Methods</h2>
+<h3>void retrieveDeviceToken(Dictionary args)</h3>
+<p>Asynchronously retrieves the device token that you should use for any calls to the Appcelerator Cloud Service's subscribe
+or unsubscribe to push notification channels. This token is unique to each application, and each device.</p>
+<p>Takes a single argument, an object literal with the following required properties:</p>
+<ul>
+<li>function success(e): A callback to be executed when the token is successfully retrieved. The first argument, "e", is an object literal with one property: string deviceToken.</li>
+<li>function error(e): A callback to be executed when token retrieval fails. Network failure is the most common cause. The first argument, "e", is an object literal with one property: string error.</li>
+</ul>
+<h3>void clearStatus()</h3>
+<p>A method to clear stored Push status including Push type, device token, GCM SenderId, etc.
+This method is useful for changing GCM SenderId when needed.
+After calling this app, Push will be reinitialized, and please start to get device token again.</p>
+<h2>Properties</h2>
+<p><em>WARNING</em>: The defaults listed below are used until you set a property for the first time. Because the properties are
+persisted to the device settings (just like Ti.App.Properties), the most recent value you set will always be used.</p>
+<h3>boolean showTrayNotification [defaults to true]</h3>
+<p>Whether or not to show a tray notification when a new push is received. If your payload is only a string, it will be
+used as the contentText and tickerText, and your application's name will be used as the contentTitle with a system icon.</p>
+<h4>icon</h4>
+<p>Icons that are to be referenced by push notifications sent to the application should be placed in the
+'platform/android/res/drawable' folder of the application. Icon file names are specified in the notification message
+without their file extension (e.g. 'logo').</p>
+<h4>sound</h4>
+<p>Sound files that are to be played by push notifications sent to the application should be placed in the
+'Resources/android/sound' folder of the application. Sound file names are specified in the notification message
+with their file extension (e.g. 'mysound.mp3').</p>
+<h3>boolean showAppOnTrayClick [defaults to true]</h3>
+<p>Whether or not clicking the tray notification will bring your application to the foreground. This is only applicable if
+you have set "showTrayNotification" to true.</p>
+<h3>boolean showTrayNotificationsWhenFocused [defaults to false]</h3>
+<p>Whether or not to show tray notifications when your application is in the foreground.</p>
+<h3>boolean focusAppOnPush [defaults to false]</h3>
+<p>Whether or not your application is brought to the foreground whenever a new push is received.</p>
+<h2>Events</h2>
+<h3>trayClickLaunchedApp</h3>
+<p>Fired when a tray notification is shown and the application is not running. Touching it launches the app, and fires this
+event.</p>
+<h3>trayClickFocusedApp</h3>
+<p>Fired when a tray notification is shown and the application is already running. Touching it focuses the app, and fires
+this event.</p>
+<h3>callback</h3>
+<p>Fired whenever a push notification is received. If your application is not running when a push is received, the push
+will be saved in a queue until the next time you add an event listener for this.</p>
+<p>This event receives an object literal with a single property:</p>
+<ul>
+<li>string payload: A JSON string of your data payload. Use JSON.parse to turn this in to an object you can use.</li>
+</ul>
+<p>Example listener:
+<pre>
+    CloudPush.addEventListener('callback', function (evt) {
+        Ti.API.info('Received push! ' + evt.payload);
+        Ti.API.info('JSON: ' + JSON.parse(evt.payload));
+        alert(evt.payload);
+    });
+</pre></p>
+<h2>TiApp.xml</h2>
+<p>The constants this module uses can be overriden in your tiapp.xml, as follows:</p>
+<h3>acs-push-api-url, acs-push-api-url-production, acs-push-api-url-development</h3>
+<p>Specifies which ACS api url is used.</p>
+<h3>acs-gcm-sender-id, acs-gcm-sender-id-production, acs-gcm-sender-id-development</h3>
+<p>Specifies the required GCM sender id. If you visit https://code.google.com/apis/console, and create an app (or use an existing one), the
+sender ID will be in your URL following "#project:". For example, it may look like "801234118521".</p>
+<h3>acs-grouped-notification-message, acs-grouped-notification-message-production, acs-grouped-notification-message-development</h3>
+<p>Specifies grouped message when there are more than one unread messages in Android notification tray. Use "$number$" to represent number of unread message.
+For example, if setting acs-grouped-notification-message to "You have $number$ unread messages.", you will get "You have 3 unread messages." if there are 3 unread message.
+This value also can be set by acs_grouped_notification_message under i18n/specific_locale/string.xml, to have an internationalization support.</p>
+<h2>Usage</h2>
+<p>See example.js</p>
+<h2>Author</h2>
+<p>Dawson Toth, Jeff English, Paul Lv and Jon Alter</p>
+<h2>Module History</h2>
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+<h2>Feedback and Support</h2>
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=Android%20Titanium%20CloudPush%20Module">info@appcelerator.com</a>.</p>
+<h2>License</h2>
+<p>Copyright(c) 2012-2013 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

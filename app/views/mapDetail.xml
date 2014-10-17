@@ -1,0 +1,14 @@
+<Alloy>
+    <Window id='mainWindow' title = 'Photo Detail'>
+        <View class='container'>
+            <Label id='titleLabel'></Label>
+            <View id='imageContainer'>
+                <ImageView id='image'></ImageView>
+            </View>
+            <View id='buttonContainer'>
+                <Button id='commentButton'>Comment</Button>
+                <Button id='shareButton'>Share</Button>
+            </View>
+        </View>
+    </Window>
+</Alloy>

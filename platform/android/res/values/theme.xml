@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Titanium" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+    <style name="Theme.MyTheme" parent="@android:style/Theme.Holo">
+        <item name="android:editTextStyle">@style/editText</item>
+    </style>
+    <style name="editText" parent="@android:style/Widget.EditText">
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+</resources>

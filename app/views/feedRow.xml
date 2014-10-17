@@ -1,0 +1,15 @@
+<Alloy>
+   <TableViewRow id="row" class="row" row_id="">
+      <View class="container">
+         <Label id="titleLabel"></Label>
+         <View id="imageContainer">
+            <ImageView id="image"></ImageView>
+         </View>
+         <View id="buttonContainer">
+           <Button id="commentButton">Comment</Button>
+           <Button id="shareButton">Share</Button>
+           <Button id="locationButton">Location</Button>
+         </View>
+      </View>
+   </TableViewRow>
+</Alloy>

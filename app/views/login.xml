@@ -1,0 +1,44 @@
+<Alloy>
+	<Window id="index" class="loginContainer" >
+		<ScrollView>
+			<!-- homeView -->
+			<View id='homeView'>
+				<Label id='welcomeText'></Label>
+				<View id="hvButtonContainer" >
+					<Button id="showCreateAccountBtn" title="Create Account"/>
+					<Button id="showLoginBtn" title="Login"/>
+					<Button id="showLoginFBBtn" title="Facebook Connect" />
+				</View>
+			</View>
+			<!-- loginView -->
+			<View id='loginView'>
+				<Label id='loginText'></Label>
+				<View id="lvContainer" >
+					<TextField id="email" class='tfWrapper' />
+					<TextField id="password" class='tfWrapper' />
+					<View class="centerHelper">
+						<Button id="doLoginBtn" title="Login" />
+						<Button id="cancelLoginBtn" title="Cancel" />
+					</View>
+					<Button id="forgotPasswordBtn" title="Forgot Password" />
+				</View>
+			</View>
+			<!-- createAcctView -->
+			<View id='createAcctView'>
+				<Label id='accountText'></Label>
+				<View id="cavContainer" >
+					<TextField id="acct_fname" class='tfWrapper' />
+					<TextField id="acct_lname" class='tfWrapper' />
+					<TextField id="acct_email" class='tfWrapper' />
+					<TextField id="acct_password" class='tfWrapper' />
+					<TextField id="acct_password_confirmation" class='tfWrapper'/>
+					<View class="centerHelper">
+						<Button id="doCreateAcctBtn" title="Create Account"/>
+						<Button id="cancelCreateAcctBtn" title="Cancel" />
+					</View>
+				</View>
+			</View>
+
+		</ScrollView>
+	</Window>
+</Alloy>

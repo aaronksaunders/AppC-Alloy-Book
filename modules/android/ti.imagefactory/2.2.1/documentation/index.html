@@ -1,0 +1,148 @@
+<h1>Ti.ImageFactory Module</h1>
+<h2>Description</h2>
+<p>This module provides a set of image transformation functions.</p>
+<h2>Getting Started</h2>
+<p>View the <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+<h2>Accessing the Ti.ImageFactory Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var ImageFactory = require('ti.imagefactory');
+</code></pre>
+<h2>Functions</h2>
+<h3>imageWithAlpha</h3>
+<p>Creates a new image by creating a copy of the given image, adding an alpha channel if it doesn't already have one.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Options[dictionary]: A dictionary specifying the options for the transformation<ul>
+<li>format [int]: The output format of the image: either ImageFactory.PNG or ImageFactory.JPEG (default: ImageFactory.JPEG)</li>
+<li>quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality). (default: 0.7)</li>
+</ul>
+</li>
+</ul>
+<h3>imageWithTransparentBorder</h3>
+<p>Creates a new image by creating a copy of the given image, adding a transparent border of the given size around its edges. The size of the image will be expanded by the specified border size.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Options[dictionary]: A dictionary specifying the options for the transformation<ul>
+<li>borderSize[int]: The size of the border (default: 1)</li>
+<li>format [int]: The output format of the image: either ImageFactory.PNG or ImageFactory.JPEG (default: ImageFactory.JPEG)</li>
+<li>quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality). (default: 0.7)</li>
+</ul>
+</li>
+</ul>
+<h3>imageWithRoundedCorner</h3>
+<p>Creates a new image by creating a copy of the given image with rounded corners.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Options[dictionary]: A dictionary specifying the options for the transformation<ul>
+<li>borderSize[int]: The size of the border (default: 1)</li>
+<li>cornerRadius[int]: The radius of the corner edges (default: 0)</li>
+<li>format [int]: The output format of the image: either ImageFactory.PNG or ImageFactory.JPEG (default: ImageFactory.JPEG)</li>
+<li>quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality). (default: 0.7)</li>
+</ul>
+</li>
+</ul>
+<h3>imageAsThumbnail</h3>
+<p>Creates a new image by creating a copy of the given image that is squared to the thumbnail size.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Options[dictionary]: A dictionary specifying the options for the transformation<ul>
+<li>size[int]: The size of the thumbnail (default: 48)</li>
+<li>borderSize[int]: The size of the border (default: 1)</li>
+<li>cornerRadius[int]: The radius of the corner edges (default: 0)</li>
+<li>dither[boolean]: Indicates if dithering should be applied while scaling. May provide better quality (default: true)</li>
+<li>format [int]: The output format of the image: either ImageFactory.PNG or ImageFactory.JPEG (default: ImageFactory.JPEG)</li>
+<li>quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality). (default: 0.7)</li>
+</ul>
+</li>
+</ul>
+<h3>imageAsResized</h3>
+<p>Creates a new image by creating a copy of the given image that is rescaled to the specified size.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Options[dictionary]: A dictionary specifying the options for the transformation<ul>
+<li>width[int]: The width of the new image (default: image width)</li>
+<li>height[int]: The height of the new image (default: image height)</li>
+<li>format [int]: The output format of the image: either ImageFactory.PNG or ImageFactory.JPEG (default: ImageFactory.JPEG)</li>
+<li>quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality). (default: 0.7)</li>
+</ul>
+</li>
+</ul>
+<h3>imageAsCropped</h3>
+<p>Creates a new image by creating a copy of the given image that is cropped to the specified bounds.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Options[dictionary]: A dictionary specifying the options for the transformation<ul>
+<li>width[int]: The width of the new image (default: image width)</li>
+<li>height[int]: The height of the new image (default: image height)</li>
+<li>x[int]: The x-coordinate of the upper-left corner of the bounds (default: image center - width / 2)</li>
+<li>y[int]: The y-coordinate of the upper-left corner of the bounds (default: image center - height / 2)</li>
+<li>format [int]: The output format of the image: either ImageFactory.PNG or ImageFactory.JPEG (default: ImageFactory.JPEG)</li>
+<li>quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality). (default: 0.7)</li>
+</ul>
+</li>
+</ul>
+<h3>imageTransform</h3>
+<p>Creates a new image by applying a sequence of transformations to the image.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to transform</li>
+<li>Transform[dictionary]: A sequence of transform specifications. Transforms are listed as additional parameters to the function and are applied in the order specified. Each transform is a dictionary with the options described above for each transform along with an additional 'type' property included with each dictionary of transform options.<ul>
+<li>type[int]: The identifier of the transform to apply. One of the following constants<ul>
+<li>imagefactory.TRANSFORM_CROP</li>
+<li>imagefactory.TRANSFORM_RESIZE</li>
+<li>imagefactory.TRANSFORM_THUMBNAIL</li>
+<li>imagefactory.TRANSFORM_ROUNDEDCORNER</li>
+<li>imagefactory.TRANSFORM_TRANSPARENTBORDER</li>
+<li>imagefactory.TRANSFORM_ALPHA</li>
+</ul>
+</li>
+<li>options as described in the above transforms</li>
+</ul>
+</li>
+</ul>
+<h3>compress</h3>
+<p>Creates a new image by creating a copy of the given image and applying the specified compression quality. Returns a JPEG, as PNG does not support compression.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to compress</li>
+<li>Compression Quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality).</li>
+</ul>
+<h3>compressToFile(image, compression, fileURL)</h3>
+<p>Compresses the provided image straight out to a file. This method is quite a bit lighter on memory usage than the others. Returns a JPEG, as PNG does not support compression.</p>
+<h4>Arguments</h4>
+<ul>
+<li>Image blob[blob]: Image to compress</li>
+<li>Compression Quality[float]: The quality of the resulting JPEG image, expressed as a value from 0.0 to 1.0. The value 0.0 represents the maximum compression (or lowest quality) while the value 1.0 represents the least compression (or best quality).</li>
+<li>File URL[string]: The path to the file where we will save the newly compressed image.</li>
+</ul>
+<h2>Constants</h2>
+<h3>JPEG</h3>
+<p>Pass as the value for the "format" key to the methods above, and the resulting image will be formatted as a JPEG. Lossy,
+so it supports compression. (Image quality may degrade when using this format.)</p>
+<h3>PNG</h3>
+<p>Pass as the value for the "format" key to the methods above, and the resulting image will be formatted as a PNG.
+Lossless, so it does NOT support compression. (Image sizes may increase when using this format.)</p>
+<h3>TRANSFORM_NONE</h3>
+<h3>TRANSFORM_CROP</h3>
+<h3>TRANSFORM_RESIZE</h3>
+<h3>TRANSFORM_THUMBNAIL</h3>
+<h3>TRANSFORM_ROUNDEDCORNER</h3>
+<h3>TRANSFORM_TRANSPARENTBORDER</h3>
+<h3>TRANSFORM_ALPHA</h3>
+<h2>Usage</h2>
+<p>See example.</p>
+<h2>Author</h2>
+<p>Jeff English</p>
+<h2>Module History</h2>
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+<h2>Feedback and Support</h2>
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=Android%20ImageFactory%20Module">info@appcelerator.com</a>.</p>
+<h2>License</h2>
+<p>Copyright(c) 2011-2013 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>
