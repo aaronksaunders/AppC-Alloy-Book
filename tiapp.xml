@@ -43,18 +43,19 @@
                 <key>UIStatusBarHidden</key>
                 <false/>
                 <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleDefault</string>
+                <string>UIStatusBarStyleDefault</string>                
                 <key>NSLocationWhenInUseUsageDescription</key>
 				<string>Test NSLocationWhenInUseUsageDescription</string>
 				<key>NSLocationAlwaysUsageDescription</key>
-				<string>Test NSLocationAlwaysUsageDescription</string>
+				<string>Test NSLocationAlwaysUsageDescription</string>                
             </dict>
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <tool-api-level>14</tool-api-level>
         <manifest>
-            <application android:hardwareAccelerated="true" android:theme="@style/Theme.MyTheme">
+	        <uses-sdk targetSdkVersion="14"/>
+        	<application android:hardwareAccelerated="true" android:theme="@style/Theme.MyTheme">
                 <meta-data
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA5aBozWPZYZ9l-UoExJar-bSfkY8Sr6bg"/>
                 <service android:name="com.appcelerator.cloud.push.PushService"/>
