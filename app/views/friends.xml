@@ -1,5 +1,5 @@
 <Alloy>
-	<Collection src="user" instance="true" id="friendUserCollection">
+	<Collection src="user" instance="true" id="friendUserCollection"/>
 	<Tab title="Friends">
 		<Window title="Friends" id="friendsWindow">
 			<!-- used to toggle between different types of users -->
