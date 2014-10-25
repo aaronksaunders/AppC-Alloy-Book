@@ -39,7 +39,12 @@ Refer to the "Obtain a Google Maps API key" section [here](https://developers.go
 <meta-data
 android:name="com.google.android.maps.v2.API_KEY" android:value="..."/>
 ```
+### Setup Keys For Facebook and Twitter
+The keys have been removed from the tiapp.xml, this application will not function until you setup an ACS account and get the keys as mentioned above. For the twitter and facebook to function properly please follow instructions in the book for creating and app in the specified social media platforms
 
+[http://docs.appcelerator.com/titanium/3.0/#!/api/Modules.Facebook](http://docs.appcelerator.com/titanium/3.0/#!/api/Modules.Facebook)
+
+[https://apps.twitter.com/app/new](https://apps.twitter.com/app/new)
 
 ### CREATING HASH FOR ANDROID FACEBOOK SSO
 ```
