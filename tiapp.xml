@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-secret-production" type="string">vGRl4mfLdZRfReYkkpl1Ai7E6PqjzhTQ</property>
-    <property name="acs-oauth-key-production" type="string">eCGpJQdTVpeA9RHDE68acNsAmpRMymqy</property>
-    <property name="acs-api-key-production" type="string">iG0t5Rk7bvOoaPL3Nxp2pPYRQNLv0hx6</property>
-    <property name="acs-oauth-secret-development" type="string">tRUNwGuZdGZqFie51uCeJQ4XKKe7nBgd</property>
-    <property name="acs-oauth-key-development" type="string">vRWjO2Rq9BMIevU6VkVtRN75Bw1bS8og</property>
-    <property name="acs-api-key-development" type="string">o8hmR7f6O2Neqb17Ob00WZr09R32iCXX</property>
+    <property name="acs-oauth-secret-production" type="string"></property>
+    <property name="acs-oauth-key-production" type="string"></property>
+    <property name="acs-api-key-production" type="string"></property>
+    <property name="acs-oauth-secret-development" type="string"></property>
+    <property name="acs-oauth-key-development" type="string"></property>
+    <property name="acs-api-key-development" type="string"></property>
     <id>com.wiley.TIgram</id>
     <name>AppCAlloyBookApp</name>
     <version>1.0</version>
