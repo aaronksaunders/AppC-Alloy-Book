@@ -30,6 +30,7 @@ Setup your application in ACS and replace the following keys in tiapp.xml:
 <property name="acs-oauth-key-development" type="string"></property>
 <property name="acs-api-key-development" type="string"></property>
 ```
+A quick short cut for getting the keys needed is to create a new Alloy Application and click cloud enable in the settings. After the app is created, open the `tiapp.xml` and copy the keys from there and paste them into this project.
 
 ### Setup google maps API key
 
