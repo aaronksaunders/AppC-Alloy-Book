@@ -7,7 +7,7 @@
     <property name="acs-oauth-key-development" type="string">vRWjO2Rq9BMIevU6VkVtRN75Bw1bS8og</property>
     <property name="acs-api-key-development" type="string">o8hmR7f6O2Neqb17Ob00WZr09R32iCXX</property>
     <id>com.wiley.TIgram</id>
-    <name>wileychapter5</name>
+    <name>AppCAlloyBookApp</name>
     <version>1.0</version>
     <publisher>aaronksaunders</publisher>
     <url>http://www.clearlyinnovative.com</url>
@@ -19,9 +19,9 @@
     <analytics>true</analytics>
     <guid>6a71e7d4-195b-4eb8-8ce5-d139ed15ca79</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
-    <property name="ti.facebook.appid">175961759252181</property>
-    <property name="twitter.consumerKey">wNuaWTd7whh43kkMjHGA</property>
-    <property name="twitter.consumerSecret">Al0un0pjLk8nJd0U4ucMlFQS5hhxpay0eUGyANSLEpU</property>
+    <property name="ti.facebook.appid">ADD-YOUR-FACEBOOK-APPID-HERE</property>
+    <property name="twitter.consumerKey">ADD-YOUR-TWITTER-CONSUMER-KEY-HERE</property>
+    <property name="twitter.consumerSecret">ADD-YOUR-API-TWITTER-COMSUMER-SECRET-HERE</property>
     <ios>
         <plist>
             <dict>
@@ -57,7 +57,7 @@
 	        <uses-sdk targetSdkVersion="14"/>
         	<application android:hardwareAccelerated="true" android:theme="@style/Theme.MyTheme">
                 <meta-data
-                    android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA5aBozWPZYZ9l-UoExJar-bSfkY8Sr6bg"/>
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="ADD-YOUR-API-KEY-HERE"/>
                 <service android:name="com.appcelerator.cloud.push.PushService"/>
             </application>
             <!-- Camera Access -->
