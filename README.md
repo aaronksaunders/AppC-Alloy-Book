@@ -1,3 +1,5 @@
+[![Book session on Codementor](https://cdn.codementor.io/badges/book_session_github.svg)](https://www.codementor.io/aaronksaunders)
+
 Building Cross-Platform Apps using Titanium, Alloy, and Appcelerator Cloud Services
 ====
 ![Book Cover Image](http://ecx.images-amazon.com/images/I/519RGyDDVIL.jpg)
