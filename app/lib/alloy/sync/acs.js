@@ -99,7 +99,7 @@ function processACSComments(model, method, opts) {
         }
       });
       break;
-    case "update":
+    case "delete":
       var params = {};
 
       // look for the review id in opts or on model
